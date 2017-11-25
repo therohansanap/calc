@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    let viewModel = ClacViewModelFromMainScreen()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.displayText.bindAndFire { [unowned self] (displayText) in
+            self.label.text = displayText
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ sender: UIButton) {
-        
+        viewModel.buttonTapped(sender)
     }
     
 
