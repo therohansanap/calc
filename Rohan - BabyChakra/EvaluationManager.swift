@@ -13,6 +13,16 @@ class Evaluator {
     static let shared = Evaluator()
     private init() {}
     
+    
+    /**
+     This function carries out the evaluation of the expression string from
+     calculator by converting it to postfix expression.
+     
+     @param infixExpressionString The expression string from calculator display
+     
+     @return result of type Double if expression evaluated successfully
+     @return nil if expression is not valid
+    */
     func evaluate(_ infixExpressionString: String) -> Double? {
         let infixExpressionArray = getExpressionArray(infixExpressionString)
         
@@ -65,6 +75,17 @@ class Evaluator {
         return nil
     }
     
+    
+    /**
+     
+     This method takes in a string (valid / invalid) of infix expression return
+     a tokenized array of string for that expression.
+     For eg. if we pass "2+3-6", this funciton will return ["2", "+", "3", "-", "6"]
+ 
+     @param infixExpressionString - The infix expression string to process
+ 
+     @return Tokenized array of the infix expression string
+    */
     func getExpressionArray(_ infixExpressionString: String) -> [String] {
         var infixExpressionArray = [String]()
         var temp = [Character]()
@@ -93,6 +114,17 @@ class Evaluator {
         return infixExpressionArray
     }
     
+    
+    /**
+     This method converts tokenized array of infix expression to a value
+     and operator based postfix expression array. It uses Double type to
+     express values and MathOperator type to express operators.
+ 
+     @param infixExpressionArray - The tokenized array of infix expression
+ 
+     @return [Any] type array of value and operator based postfix expression array
+     @return nil if the expression is found to be invalid
+     */
     func getPostfixExpressionArray(_ infixExpressionArray: [String]) -> [Any]? {
         var outputArray = [Any]()
         let operatorStack = Stack<MathOperator>(size: 100)
