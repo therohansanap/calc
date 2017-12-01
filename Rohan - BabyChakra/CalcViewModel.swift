@@ -10,5 +10,5 @@ import UIKit
 
 protocol CalcViewModel {
     var displayText: Dynamic<String> { get }
-    func buttonTapped(_ button: UIButton)
+    func buttonTapped(buttonTitle: String)
 }

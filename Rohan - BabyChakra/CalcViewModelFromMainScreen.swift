@@ -9,36 +9,59 @@
 import UIKit
 
 class ClacViewModelFromMainScreen: CalcViewModel {
+    
     let errorString = "Error!"
     var displayText = Dynamic("0")
+    var isShowingResult = false
     
-    func buttonTapped(_ button: UIButton) {
-        guard let title = button.titleLabel?.text else {
-            return
-        }
+    func buttonTapped(buttonTitle: String) {
+        var title = buttonTitle
         
-        guard title != "+/-" else {
-            return
-        }
+        switch title {
         
-        guard title != "C" else {
+        case "C":
             displayText.value = "0"
             return
-        }
         
-        guard title != "=" else {
-            //TODO: evaluate expression
-            return
-        }
-        
-        if displayText.value == "0" || displayText.value == errorString {
-            if title == "." {
-                displayText.value = "0."
+        case "=":
+            if let result = Evaluator.shared.evaluate(displayText.value) {
+                displayText.value = getFormattedText(result)
             }else {
-                displayText.value = title
+                displayText.value = errorString
             }
+            return
+        
+        case "+/-":
+            return
+            
+        case "x":
+            title = "*"
+            
+        case "÷":
+            title = "/"
+        
+        default:
+            break
+        }
+        
+        if displayText.value == "0" || displayText.value == errorString || displayText.value == "" {
+            displayText.value = title == "." ? "0." : title
         }else {
+            if title == "." {
+                let last = String(displayText.value.last!)
+                let lastValue = Double(last)
+                
+                if lastValue == nil {
+                    displayText.value = displayText.value + "0"
+                }
+            }
             displayText.value = displayText.value + title
         }
+    }
+    
+    func getFormattedText(_ value: Double) -> String {
+        let integerValue = Int(value)
+        let integerToDouble = Double(integerValue)
+        return integerToDouble == value ? "\(integerValue)" : "\(value)"
     }
 }
