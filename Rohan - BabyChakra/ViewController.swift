@@ -26,12 +26,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func numericButtonTapped(_ sender: UIButton) {
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        viewModel.buttonTapped(sender)
     }
-    
-    @IBAction func operationsButtonTapped(_ sender: UIButton) {
-    }
-    
-    
 }
 
