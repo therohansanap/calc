@@ -48,21 +48,20 @@ class ClacViewModelFromMainScreen: CalcViewModel {
         
         if displayText.value == "0" || displayText.value == errorString || displayText.value == "" {
             displayText.value = title == "." ? "0." : title
+        }else if isShowingResult && title.isNumericValue() {
+            displayText.value = title
         }else {
-            if isShowingResult && title.isNumericValue() {
-                displayText.value = title
-            }else {
-                if title == "." {
-                    let last = String(displayText.value.last!)
-                    let lastValue = Double(last)
-                    
-                    if lastValue == nil {
-                        displayText.value = displayText.value + "0"
-                    }
+            if title == "." {
+                let last = String(displayText.value.last!)
+                let lastValue = Double(last)
+                
+                if lastValue == nil {
+                    displayText.value = displayText.value + "0"
                 }
-                displayText.value = displayText.value + title
             }
+            displayText.value = displayText.value + title
         }
+        
         isShowingResult = false
     }
     
