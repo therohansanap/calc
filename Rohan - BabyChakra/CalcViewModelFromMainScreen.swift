@@ -71,12 +71,3 @@ class ClacViewModelFromMainScreen: CalcViewModel {
         return integerToDouble == value ? "\(integerValue)" : "\(value)"
     }
 }
-
-extension String {
-    func isNumericValue() -> Bool {
-        if let _ = Double(self) {
-            return true
-        }
-        return false
-    }
-}

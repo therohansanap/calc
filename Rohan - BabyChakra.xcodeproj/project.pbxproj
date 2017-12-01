@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2EE7121FD203EE0094FE39 /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2EE7111FD203EE0094FE39 /* StringUtilities.swift */; };
 		1C5369341FC937D1002FC4E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5369331FC937D1002FC4E4 /* AppDelegate.swift */; };
 		1C5369361FC937D1002FC4E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5369351FC937D1002FC4E4 /* ViewController.swift */; };
 		1C5369391FC937D1002FC4E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C5369371FC937D1002FC4E4 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C2EE7111FD203EE0094FE39 /* StringUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
 		1C5369301FC937D1002FC4E4 /* Rohan - BabyChakra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rohan - BabyChakra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5369331FC937D1002FC4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C5369351FC937D1002FC4E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				1CEFFAA81FD19F3F0042A90F /* EvaluationManager.swift */,
 				1CEFFAAA1FD1A5910042A90F /* Stack.swift */,
 				1C53694B1FC95649002FC4E4 /* Dynamic.swift */,
+				1C2EE7111FD203EE0094FE39 /* StringUtilities.swift */,
 				1C5369371FC937D1002FC4E4 /* Main.storyboard */,
 				1C53693A1FC937D1002FC4E4 /* Assets.xcassets */,
 				1C53693C1FC937D1002FC4E4 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				1C53694C1FC95649002FC4E4 /* Dynamic.swift in Sources */,
 				1C53694A1FC9548E002FC4E4 /* CalcViewModel.swift in Sources */,
 				1C5369361FC937D1002FC4E4 /* ViewController.swift in Sources */,
+				1C2EE7121FD203EE0094FE39 /* StringUtilities.swift in Sources */,
 				1CEFFAAB1FD1A5910042A90F /* Stack.swift in Sources */,
 				1C53694E1FC9577F002FC4E4 /* CalcViewModelFromMainScreen.swift in Sources */,
 				1C5369341FC937D1002FC4E4 /* AppDelegate.swift in Sources */,
