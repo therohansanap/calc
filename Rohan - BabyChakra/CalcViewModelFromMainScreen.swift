@@ -21,6 +21,7 @@ class ClacViewModelFromMainScreen: CalcViewModel {
         
         case "C":
             displayText.value = "0"
+            isShowingResult = false
             return
         
         case "=":
@@ -29,6 +30,7 @@ class ClacViewModelFromMainScreen: CalcViewModel {
             }else {
                 displayText.value = errorString
             }
+            isShowingResult = true
             return
         
         case "+/-":
@@ -47,21 +49,35 @@ class ClacViewModelFromMainScreen: CalcViewModel {
         if displayText.value == "0" || displayText.value == errorString || displayText.value == "" {
             displayText.value = title == "." ? "0." : title
         }else {
-            if title == "." {
-                let last = String(displayText.value.last!)
-                let lastValue = Double(last)
-                
-                if lastValue == nil {
-                    displayText.value = displayText.value + "0"
+            if isShowingResult && title.isNumericValue() {
+                displayText.value = title
+            }else {
+                if title == "." {
+                    let last = String(displayText.value.last!)
+                    let lastValue = Double(last)
+                    
+                    if lastValue == nil {
+                        displayText.value = displayText.value + "0"
+                    }
                 }
+                displayText.value = displayText.value + title
             }
-            displayText.value = displayText.value + title
         }
+        isShowingResult = false
     }
     
     func getFormattedText(_ value: Double) -> String {
         let integerValue = Int(value)
         let integerToDouble = Double(integerValue)
         return integerToDouble == value ? "\(integerValue)" : "\(value)"
+    }
+}
+
+extension String {
+    func isNumericValue() -> Bool {
+        if let _ = Double(self) {
+            return true
+        }
+        return false
     }
 }
