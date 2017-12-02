@@ -19,7 +19,7 @@ class ClacViewModelFromMainScreen: CalcViewModel {
         
         switch title {
         
-        case "C":
+        case "CL":
             displayText.value = "0"
             isShowingResult = false
             return
@@ -33,7 +33,16 @@ class ClacViewModelFromMainScreen: CalcViewModel {
             isShowingResult = true
             return
         
-        case "+/-":
+        case "CE":
+            if displayText.value != "0" {
+                if displayText.value != errorString {
+                    let stringWithoutLastCharacter = String(displayText.value.dropLast())
+                    displayText.value = stringWithoutLastCharacter.isEmpty ? "0" : stringWithoutLastCharacter
+                }else {
+                    displayText.value = "0"
+                }
+            }
+            isShowingResult = false
             return
             
         case "x":

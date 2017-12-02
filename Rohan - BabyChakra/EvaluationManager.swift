@@ -53,7 +53,7 @@ class Evaluator {
                             
                         case "/":
                             if operand2 != 0 {
-                                executionStack.push(operand1 + operand2)
+                                executionStack.push(operand1 / operand2)
                             }else {
                                 return nil
                             }
