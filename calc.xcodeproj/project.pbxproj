@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1C2EE7111FD203EE0094FE39 /* StringUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
-		1C5369301FC937D1002FC4E4 /* Rohan - BabyChakra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rohan - BabyChakra.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C5369301FC937D1002FC4E4 /* calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5369331FC937D1002FC4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C5369351FC937D1002FC4E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C5369381FC937D1002FC4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		1C5369271FC937D1002FC4E4 = {
 			isa = PBXGroup;
 			children = (
-				1C5369321FC937D1002FC4E4 /* Rohan - BabyChakra */,
+				1C5369321FC937D1002FC4E4 /* calc */,
 				1C5369311FC937D1002FC4E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,12 +68,12 @@
 		1C5369311FC937D1002FC4E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C5369301FC937D1002FC4E4 /* Rohan - BabyChakra.app */,
+				1C5369301FC937D1002FC4E4 /* calc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1C5369321FC937D1002FC4E4 /* Rohan - BabyChakra */ = {
+		1C5369321FC937D1002FC4E4 /* calc */ = {
 			isa = PBXGroup;
 			children = (
 				1C5369331FC937D1002FC4E4 /* AppDelegate.swift */,
@@ -87,15 +87,15 @@
 				1C53693C1FC937D1002FC4E4 /* LaunchScreen.storyboard */,
 				1C53693F1FC937D1002FC4E4 /* Info.plist */,
 			);
-			path = "Rohan - BabyChakra";
+			path = calc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C53692F1FC937D1002FC4E4 /* Rohan - BabyChakra */ = {
+		1C53692F1FC937D1002FC4E4 /* calc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C5369421FC937D1002FC4E4 /* Build configuration list for PBXNativeTarget "Rohan - BabyChakra" */;
+			buildConfigurationList = 1C5369421FC937D1002FC4E4 /* Build configuration list for PBXNativeTarget "calc" */;
 			buildPhases = (
 				1C53692C1FC937D1002FC4E4 /* Sources */,
 				1C53692D1FC937D1002FC4E4 /* Frameworks */,
@@ -105,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = "Rohan - BabyChakra";
+			name = calc;
 			productName = "Rohan - BabyChakra";
-			productReference = 1C5369301FC937D1002FC4E4 /* Rohan - BabyChakra.app */;
+			productReference = 1C5369301FC937D1002FC4E4 /* calc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1C53692B1FC937D1002FC4E4 /* Build configuration list for PBXProject "Rohan - BabyChakra" */;
+			buildConfigurationList = 1C53692B1FC937D1002FC4E4 /* Build configuration list for PBXProject "calc" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C53692F1FC937D1002FC4E4 /* Rohan - BabyChakra */,
+				1C53692F1FC937D1002FC4E4 /* calc */,
 			);
 		};
 /* End PBXProject section */
@@ -307,10 +307,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Rohan - BabyChakra/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.therohansanaptechstudios.Rohan---BabyChakra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.therohansanaptechstudios.calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -322,10 +322,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Rohan - BabyChakra/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/calc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.therohansanaptechstudios.Rohan---BabyChakra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.therohansanaptechstudios.calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -335,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C53692B1FC937D1002FC4E4 /* Build configuration list for PBXProject "Rohan - BabyChakra" */ = {
+		1C53692B1FC937D1002FC4E4 /* Build configuration list for PBXProject "calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C5369401FC937D1002FC4E4 /* Debug */,
@@ -344,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C5369421FC937D1002FC4E4 /* Build configuration list for PBXNativeTarget "Rohan - BabyChakra" */ = {
+		1C5369421FC937D1002FC4E4 /* Build configuration list for PBXNativeTarget "calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C5369431FC937D1002FC4E4 /* Debug */,
